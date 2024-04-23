@@ -1,7 +1,7 @@
 import  mongoose  from "mongoose";
+import {MONGODB_PASSWORD , MONGODB_DBNAME} from "./../config/index.js"
 
-
-const url = "mongodb+srv://shiba486:shibaabc123@shiba.xz3yde1.mongodb.net/?retryWrites=true&w=majority&appName=shiba";
+const url = `mongodb+srv://${MONGODB_DBNAME}:${MONGODB_PASSWORD}@shiba.xz3yde1.mongodb.net/?retryWrites=true&w=majority&appName=shiba`;
 const connectDB = async function(){
     try {
        const connectionInstance = await mongoose.connect(url)
